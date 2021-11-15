@@ -23,11 +23,11 @@
     @extend %container;
 
     @include lg-min {
-      gap: $gap * 5;
+      gap: $gap-x5;
       grid-template-columns: 1fr 271px;
     }
     @include lg-md {
-      gap: $gap * 2;
+      gap: $gap-x2;
       grid-template-columns: 1fr 271px;
     }
     @include md-sm {
@@ -35,7 +35,7 @@
       grid-template-columns: 1fr 236px;
     }
     @include sm {
-      gap: $gap * 2;
+      gap: $gap-x2;
       grid-template-columns: 1fr;
     }
   }
@@ -44,5 +44,27 @@
       position: relative;
       margin-top: -5px;
     }
+    p:first-of-type::after {
+      position: absolute;
+      top: 0;
+      width: 2px;
+      height: 200px;
+      content: "";
+      background-color: rgba(99, 117, 136, 0.1);
+      @include lg-min {
+        right: -50px;
+      }
+      @include lg-md {
+        right: -20px;
+      }
+      @include md-sm {
+        right: -10px;
+      }
+    }
+  }
+  &__image {
+    display: grid;
+    align-content: center;
+    justify-items: center;
   }
 }
