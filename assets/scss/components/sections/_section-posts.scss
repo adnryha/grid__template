@@ -21,6 +21,7 @@
     padding-bottom: $gap;
     gap: $gap;
     @include lg-min {
+<<<<<<< HEAD
       grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
       grid-template-columns: repeat (4, 1fr);
     }
@@ -98,3 +99,12 @@
     padding: $gap;
   }
 }
+=======
+      grid-template-areas:
+        "p1 p1 p2 p3"
+        "p4 p5 p6 p6";
+      grid-template-columns: repeat (4, 1fr);
+    }
+  }
+}
+>>>>>>> d8ee3bd32ed82ee51ef81e973adb887951378c96
