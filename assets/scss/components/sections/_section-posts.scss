@@ -22,6 +22,9 @@
     gap: $gap;
     @include lg-min {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dev
       grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
       grid-template-columns: repeat (4, 1fr);
     }
@@ -30,20 +33,11 @@
       grid-template-columns: repeat(3, 1fr);
     }
     @include md-sm {
-      grid-template-areas:
-        "p1 p2"
-        "p3 p4"
-        "p5 p6";
+      grid-template-areas: "p1 p2" "p3 p4" "p5 p6";
       grid-template-columns: 1fr 1fr;
     }
     @include sm {
-      grid-template-areas:
-        "p1"
-        "p2"
-        "p3"
-        "p4"
-        "p5"
-        "p6";
+      grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";
       grid-template-columns: 1fr;
     }
   }
