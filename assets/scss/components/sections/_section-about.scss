@@ -2,10 +2,8 @@
 @use "../../mixins" as *;
 .about {
   background-color: $color-gray-light;
-
-  & h2 {
-    margin-top: 0;
-  }
+  letter-spacing: 0.055em;
+  height: 691px;
   @include lg-min {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -14,20 +12,24 @@
     padding-top: 80px;
     padding-bottom: 80px;
   }
-  @include md-min {
+  @include md {
     padding-top: 60px;
     padding-bottom: 60px;
   }
+  & h2 {
+    margin-top: 0;
+  }
+
   &__container {
     display: grid;
     @extend %container;
 
     @include lg-min {
-      gap: $gap * 5;
+      gap: $gap-x5;
       grid-template-columns: 1fr 271px;
     }
     @include lg-md {
-      gap: $gap * 2;
+      gap: $gap-x2;
       grid-template-columns: 1fr 271px;
     }
     @include md-sm {
@@ -35,14 +37,46 @@
       grid-template-columns: 1fr 236px;
     }
     @include sm {
-      gap: $gap * 2;
+      gap: $gap-x2;
       grid-template-columns: 1fr;
     }
   }
   &__content {
-    p:first-of-type {
+    & p {
+      @include lg-min {
+        font-size: 1.125rem;
+      }
+    }
+    & p:first-of-type {
       position: relative;
       margin-top: -5px;
+    }
+    & p:first-of-type::after {
+      position: absolute;
+      top: 0;
+      width: 2px;
+      height: 200px;
+      content: "";
+      background-color: rgba(99, 117, 136, 0.1);
+      @include lg-min {
+        right: -50px;
+      }
+      @include lg-md {
+        right: -20px;
+      }
+      @include md-sm {
+        right: -10px;
+      }
+    }
+  }
+  &__image {
+    height: 491px;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    & img {
+      max-width: 100%;
+      max-height: 480px;
     }
   }
 }
