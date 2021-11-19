@@ -2,9 +2,8 @@
 @use "../../mixins" as *;
 .about {
   position: relative;
-
   background-color: $color-gray-light;
-
+  letter-spacing: 0.055em;
   @include lg-min {
     padding-top: $gap-x5;
     padding-bottom: $gap-x5;
@@ -61,6 +60,13 @@
 
       & p:first-of-type {
         margin-top: -5px;
+    p:last-child {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    & p {
+      @include lg-min {
+        font-size: 1.125rem;
       }
     }
     @include md {
