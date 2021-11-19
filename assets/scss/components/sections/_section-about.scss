@@ -57,10 +57,11 @@
       letter-spacing: 0.055em;
 
       font-size: 1rem;
-
-      & p:first-of-type {
-        margin-top: -5px;
-    p:last-child {
+    }
+    & p:first-of-type {
+      margin-top: -5px;
+    }
+    & p:last-child {
       margin-top: 0;
       margin-bottom: 0;
     }
@@ -85,26 +86,27 @@
       height: 200px;
       content: "";
       background-color: rgba(99, 117, 136, 0.1);
-      @include lg-min {
-        top: 140px;
-        right: -$gap * 2.5;
-      }
-      @include lg-md {
-        top: 115px;
-        right: -$gap;
-      }
-      @include md-sm {
-        top: 85px;
-        right: -$gap-sm;
-      }
-      @include sm {
-        display: none;
-      }
     }
-    & p:last-of-type {
-      margin: 0;
+    @include lg-min {
+      top: 140px;
+      right: -$gap * 2.5;
+    }
+    @include lg-md {
+      top: 115px;
+      right: -$gap;
+    }
+    @include md-sm {
+      top: 85px;
+      right: -$gap-sm;
+    }
+    @include sm {
+      display: none;
     }
   }
+  & p:last-of-type {
+    margin: 0;
+  }
+
   &__image {
     display: grid;
     align-items: center;
