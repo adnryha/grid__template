@@ -15,6 +15,9 @@
   }
   &__container {
     @extend %container;
+    & h2 {
+      margin-top: 0px;
+    }
   }
   &__grid {
     display: grid;
@@ -22,7 +25,7 @@
     gap: $gap;
     @include lg-min {
       grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
-      grid-template-columns: repeat (4, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
     @include lg-md {
       grid-template-areas: "p1 p1 p2" "p3 p4 p4" "p5 p5 p6";
@@ -45,6 +48,9 @@
   }
 }
 .post-item {
+  &:hover {
+    background-color: darken(#f2f2f2, 10%);
+  }
   transition: background-color 0.5s;
   background-color: #f2f2f2;
   &:nth-of-type(1) {
@@ -79,13 +85,26 @@
     background-color: $color-primary;
   }
   &__image img {
+    &:hover {
+      transform: scale(1.1);
+    }
     width: 100%;
     object-fit: cover;
     transition: transform 0.5s;
+    object-fit: cover;
   }
   &__caption {
     display: grid;
     align-content: center;
     padding: $gap;
+    & h3 {
+      transition: color 0.5s;
+      text-align: center;
+      font-family: $font-header;
+    }
+    & p {
+      transition: color 0.5s;
+      text-align: center;
+    }
   }
 }
