@@ -3,7 +3,6 @@
 .about {
   background-color: $color-gray-light;
   letter-spacing: 0.055em;
-  height: 691px;
   @include lg-min {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -42,6 +41,10 @@
     }
   }
   &__content {
+    p:last-child {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
     & p {
       @include lg-min {
         font-size: 1.125rem;
@@ -70,7 +73,6 @@
     }
   }
   &__image {
-    height: 491px;
     display: grid;
     align-content: center;
     justify-items: center;
