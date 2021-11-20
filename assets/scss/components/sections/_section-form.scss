@@ -57,6 +57,6 @@
   & .btn--primary:hover {
     background-color: $color-accent;
     border: 2px solid $color-light;
-    transform: transition border 0.5s;
+    transition: border-color 0.5s;
   }
 }
