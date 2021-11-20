@@ -36,7 +36,7 @@
       grid-template-columns: 1fr 236px;
     }
     @include sm {
-      gap: $gap-x2;
+      gap: $gap;
       grid-template-columns: 1fr;
     }
   }
