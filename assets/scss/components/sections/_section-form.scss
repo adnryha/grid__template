@@ -22,9 +22,6 @@
     }
   }
   &__input {
-    &::placeholder {
-      color: $color-gray;
-    }
     outline: none;
     display: block;
     width: 100%;
@@ -45,6 +42,9 @@
       background-color: #4c546b;
       border-bottom-color: $color-light;
       transition: border-color 0.5s, background-color 0.5s;
+      &::placeholder {
+        color: $color-gray;
+      }
     }
   }
   & .btn--primary {
