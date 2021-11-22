@@ -22,6 +22,9 @@
     }
   }
   &__input {
+    &::placeholder {
+      color: $color-gray;
+    }
     outline: none;
     display: block;
     width: 100%;
@@ -37,14 +40,11 @@
     font-size: 1.125rem;
     &:hover,
     &:focus {
+      color: $color-light;
       border: 2px solid #5e657a;
       background-color: #4c546b;
       border-bottom-color: $color-light;
       transition: border-color 0.5s, background-color 0.5s;
-      &::placeholder {
-        color: $color-light;
-        transition: color 0.5s;
-      }
     }
   }
   & .btn--primary {
